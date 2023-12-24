@@ -1,0 +1,42 @@
+* {
+    margin:0;
+    padding:0;
+}
+#nav {
+    background-color:gray;
+    border:1px solid blue;
+    float:left;
+    top:60px;
+    text-indent:0px;
+}
+#nav ul {
+    float:left;
+    list-style-type:none;
+}
+#nav ul li {
+    position:relative;
+    float:left;
+}
+#nav ul li a {
+    display:block;
+    color:black;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 1em 6px;
+}
+#nav ul ul  a:hover {
+    color:white;
+    background: orange;
+}
+#nav li:hover ul {
+    display:block;
+}
+#nav li ul {
+    position:absolute;
+    display: none;
+    width:10em
+}
+#nav ul li ul li {
+    width:100%;
+    border: 1px solid green;
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K214110789_Nguyễn Thị Chung</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: larger;
+            background-image: url('Wrap.jpg');
+            background-repeat: repeat; 
+            background-size: auto; 
+            background-color: #f0f0f0; 
+            display: flex;
+        }
+        .frame {            
+            margin-top: 30px;
+            margin-left: 250px;
+            margin-right: 250px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            border: 3px solid gray;
+            size: auto;       
+            display: flex;
+        }
+        .menu {
+            width: 20%;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            
+        }
+
+        .content {
+            width: 80%;
+            background-color: #fff;                       
+        }
+
+        .menu-item {
+            margin-bottom: 10px;
+        }
+        a {
+            color: green;
+            text-decoration: none;
+        }
+        a:hover {
+            color:red;
+        }
+        p {
+            text-align:center; 
+        }
+        .daycount {
+            background-color: yellow;
+            border: 2px solid gray;
+        }
+        .frame2{   
+            background-color: #fff;
+            size: auto;       
+            display: flex;
+        }
+        .left {
+            float:left;
+            padding-left: 20px;
+            padding-right: 10px;
+            width: 45%;
+        }
+        .right {
+            float:right;
+            padding-left: 10px;
+            padding-right: 20px;
+            width: 45%;
+        }
+        .bottom {
+            border: 2px solid gray;
+        }
+        .green {
+            color: green;
+        }
+        .red {
+            color:red
+        }
+    
+        
+    </style>
+    
+</head>
+<body>
+    <div class="frame">        
+        <div class="menu">
+            <h2>Why don't you visit our:</h1>
+            <div class="menu-item">
+                <dl>
+                    <dt><a href=#>Homepage</a></dt>
+                    <dt><a href=#>Angel</a></dt>
+                    <dt><a href=#>Card</a></dt>
+                    <dt><a href=#>Collectible</a></dt>
+                    <dt><a href=#>Gartland</a></dt>
+                    <dt><a href=#>Gift Wrap</a></dt>
+                    <dt><a href=#>Light</a></dt>
+                    <dt><a href=#>Nut Cracker</a></dt>
+                    <dt><a href=#>Orman Ant</a></dt>
+                    <dt><a href=#>Santa</a></dt>
+                    <dt><a href=#>Train</a></dt>
+                    <dt><a href=#>Tree</a></dt>
+                    <dt><a href=#>Village</a></dt>
+                    <dt><a href=#>Wreath</a></dt>
+                </dl>
+            </div>
+        </div>
+        <div class="content">
+            <p><img src="Logo.jpg"></p>
+            <div class="daycount" align="center">
+                <p>
+                <b id="today"></b><br>
+                <b id="countdown"></b>
+                </p>
+                <script>
+                    function calculateDaysUntilChristmas() {
+                        var currentDate = new Date();
+                        var christmasDate = new Date(currentDate.getFullYear(), 11, 25);
+            
+            
+                        // Tính số mili giây còn lại
+                        var timeRemaining = christmasDate - currentDate;
+            
+                        // Chuyển đổi số mili giây thành số ngày
+                        var daysRemaining = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+                        var currentDateFormatted = currentDate.toDateString();
+                        return {
+                            currentDateFormatted,
+                            daysRemaining
+                        };
+                    }  
+                        document.getElementById('today').innerHTML='Today is ' + calculateDaysUntilChristmas().currentDateFormatted;
+                        document.getElementById('countdown').innerHTML='Only ' + calculateDaysUntilChristmas().daysRemaining + ' days until Christmas.';
+                    calculateDaysUntilChristmas()
+                </script>                      
+            </div>
+            <div class="frame2">
+                <div class="left">
+                    <h1 class="green">Welcome!</h1>
+                    <div>
+                      <img src="Bells.jpg" style="float:left; margin: 5px">
+                    </div>
+                    Welcome to <b class="red">North Pole Novelties</b>. Consider us your complete holiday store. 
+                    Whether you're a collector or simply looking for a beautiful piece to treasure 
+                    for years, you'll find it at NPN. Please click on one of the many links to explore 
+                    all we have to offer.
+                    <h1 class="green">New Flash!</h1>
+                    North Pole Novelties is proud to announce a new line of <b class="red">Lasseter Old Towne Village 
+                    collectible houses</b>. Start building your collection of these wonderful miniature porcelain 
+                    houses and shops. <br>
+                    <br>
+                    Each model has accessories to enhance the collection. Be sure to order extra trees, fences,
+                     street lights and signs to bring activity and a festive atmosphere to your miniature town.
+                </div>
+                <div class="right">
+                    <h1 class="green">Who Are We?</h1>
+                    <div>
+                        <img src="Man.png" style="float:right; margin: 5px">
+                      </div>
+                      Located in Seton Grove, Minnesota, North Pole Novelties is one of the oldest and 
+                      largest holiday stores in the country. The store was founded in 1968 by <b class="red">David Watkins</b> 
+                      (shown here). Today, David, his family, and over 300 employees manage the daily operation 
+                      of making the holiday season last all year. <br>
+                      <br>
+                      The store itself is the size of two football fields and attracts visitors from around the world. 
+                      If you can't pay us a visit, order our catalogue. We will deliver to any spot in the United States 
+                      and overseas. In a rush? We can deliver your order overnight! We also gift wrap.
+                </div>
+            </div>
+            <div class="bottom">
+                <p class="green">
+                    North Pole No Veltle <br>
+                    25 OakDale Avenue<br>
+                    Seton Grove, MN 53112<br>
+                    Telephone: (404) 555-1225
+                </p>
+            </div>           
+      </div>                
+    </div>    
+</body>
+</html>

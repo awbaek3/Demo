@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        table {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        td {
+            line-height: 1.5;
+            padding: 15px;
+        }
+    </style>
+    <script>
+        function updateBackgroundColor() {
+            var red = document.form.bgred.value;
+            var green = document.form.bggreen.value;
+            var blue = document.form.bgblue.value;
+            var backgroundColor = '#' + red + green + blue;
+
+            var body = document.getElementsByTagName('body')[0];
+            body.style.backgroundColor = backgroundColor;
+        }
+
+        function updateTextColor() {
+            var red = document.form.textred.value;
+            var green = document.form.textgreen.value;
+            var blue = document.form.textblue.value;
+            var textColor = '#' + red + green + blue;
+
+            var text = document.getElementById('text');
+            text.style.color = textColor;
+        }
+
+        function applyColors() {
+            updateBackgroundColor();
+            updateTextColor();
+        }
+        function Reload(){
+            var text = document.getElementById('text');
+            text.style.color = '#000000';
+            var body = document.getElementsByTagName('body')[0];
+            body.style.backgroundColor = '#FFFFFF';   
+        }
+    </script>
+</head>
+<body>
+    <h1>A Simple Color Picker</h1>
+    <form name="form">
+        <table border="1">
+            <tr>
+                <td width="350">
+                    Background (enter values from '00' to 'FF') <br />
+                    RED: <input type="text" name="bgred" value="FF" size="1" >
+                    GREEN: <input type="text" name="bggreen" value="FF" size="1" >
+                    BLUE: <input type="text" name="bgblue" value="FF" size="1" > <br />
+                    Text (enter values from '00' to 'FF') <br />
+                    RED: <input type="text" name="textred" value="00" size="1">
+                    GREEN: <input type="text" name="textgreen" value="00" size="1">
+                    BLUE: <input type="text" name="textblue" value="00" size="1"> <br />
+                    <p style="text-align: center;">
+                        <input type="button" name="btnApply" value="Apply" onclick="applyColors()">
+                        <input type="reset" name="btnReload" value="Reload" onclick="Reload()">
+                    </p>
+                </td>
+                <td width="350" id="text">
+                    <h3>HAMLET:</h3>
+                    Speak the speech, I pray for you, as I pronounced it to you, trippingly on the tongue: but if you mouth
+                    it, as many of your players do, I had as lief the town-crier spoke my lines.
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
